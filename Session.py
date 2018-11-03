@@ -4,3 +4,24 @@ class Session:
 	def __init__(self, kwargs):
 		self.date 		  = kwargs['date']
 		self.workout_name = kwargs['workout_name']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import main
+if __name__ == '__main__':
+    main.main()

@@ -7,3 +7,20 @@ class Set:
         self.mi      = kwargs['mi']
         self.seconds = kwargs['seconds']
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+import main
+if __name__ == '__main__':
+    main.main()
