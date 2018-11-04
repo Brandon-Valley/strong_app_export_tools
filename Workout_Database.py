@@ -14,24 +14,22 @@ class Workout_Database:
         set_dl = export_format.build_row_dict_list(export_filename) # list of dicts, each dict represents a set
         print(set_dl)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         
-        
-        curr_date         = ''
-        curr_workout_name = ''
-        curr_session      = None
-        
         for set_d in set_dl:
-            tools.print_dict(set_d)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#             tools.print_dict(set_d)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             
             # decide if need to make new Session, if so, append curr_session and make new session, also set new curr_workout_name and curr_date
-            if set_d['Date'] != curr_date or set_d['Workout Name'] != curr_workout_name:
-                if curr_session != None:
-                    self.session_list.append(curr_session)
+            if (self.session_list                  == [] or
+                self.session_list[-1].date         != set_d['Date'] or
+                self.session_list[-1].workout_name != set_d['Workout Name']):
                 
-                curr_session = Session.Session(set_d)
-                curr_date         = set_d['Date']
-                curr_workout_name = set_d['Workout Name']
+                new_session = Session.Session(set_d)
+                self.session_list.append(new_session)
+            
+            else:
+                self.session_list[-1].add_set(set_d)
                 
                 
+
     def print_me(self, indent = '    '):
         print('')
         print('')
@@ -39,11 +37,13 @@ class Workout_Database:
         print(indent + 'num_sessions: ' + str( self.num_sessions() ))    
         
         for session_num, session in enumerate(self.session_list):
-            session.print_me(indent, indent * 2, )
+            session.print_me(indent, indent * 2, session_num)
+                
                 
     
     def num_sessions(self):
         return len( self.session_list )
+    
     
     
     def get_trace___max_weight(self, exercise_name):

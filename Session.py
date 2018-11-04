@@ -12,6 +12,7 @@ class Session:
         self.add_set(set_d)
         
         
+        
     def add_set(self, set_d):
         
         # decide if new exercise_set_block needs to be made, if so, makes it and appends to end of self.exercise_set_block_list
@@ -25,9 +26,10 @@ class Session:
             self.exercise_set_block_list[-1].add_set(set_d)
             
             
+            
     def print_me(self, indent = '  ', init_indent = '', session_num = ''):        
             print('')
-            print(init_indent + 'Session: ' + session_num)
+            print(init_indent + 'Session: ' + str(session_num))
             print(init_indent + indent + 'date:         ' + self.date)
             print(init_indent + indent + 'workout_name: ' + self.workout_name)
             
