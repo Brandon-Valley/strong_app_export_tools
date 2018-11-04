@@ -33,8 +33,8 @@ class Exercise_Set_Block:
 		max_weight = 0
 		
 		for set in self.set_list:
-			if set.weight > max_weight:
-				max_weight = set.weight
+			if float(set.weight) > max_weight:
+				max_weight = float(set.weight)
 		
 		return max_weight
 		

@@ -1,7 +1,9 @@
 import tools
 import export_format
 import Workout_Database
+import plot_tools
 
+import arrow
 
 export_filename = 'export.csv'
 output_filename = 'correct_export.csv'
@@ -23,7 +25,17 @@ def main():
     print('num sessions: ', wd.num_sessions())
     print('last sesh exersise names: ', wd.session_list[-1].exercise_names_set())
     
-    wd.print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#     wd.print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
+    GRAPH_TITLE = 'max weight test'
+    GRAPH_FILENAME = 'max_weight_test' + arrow.now().format('YYYY-MM-DD') + '.html'
+    
+    trace = wd.get_trace___max_weight('"Squat (Barbell)"')
+    plot_tools.plot_single(GRAPH_TITLE, GRAPH_FILENAME, trace)
+    
+    
+    
+    
     
     print('Done!')
 

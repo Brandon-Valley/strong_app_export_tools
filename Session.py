@@ -40,7 +40,7 @@ class Session:
             
             
     def exercise_names_set(self):
-        exercise_name_s = set({})
+        exercise_name_s = set([])
         
         for esb in self.exercise_set_block_list:
             exercise_name_s.add(esb.exercise_name)
@@ -49,8 +49,13 @@ class Session:
     
     
     
+    def max_weight(self, exercise_name):
+        for esb in self.exercise_set_block_list:
+            if esb.exercise_name == exercise_name:
+                return esb.max_weight() 
+    
+    
                  
-
 
 
 

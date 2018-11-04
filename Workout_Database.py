@@ -1,6 +1,7 @@
 import export_format
 import tools
 import Session
+import plot_tools
 
 class Workout_Database:
     def __init__(self, export_filename):
@@ -47,13 +48,16 @@ class Workout_Database:
     
     
     def get_trace___max_weight(self, exercise_name):
+        name = exercise_name + ':  Max Weight' 
         x = [] # date
         y = [] # weight
         
         for session in self.session_list.__reversed__():
-            if exercise_name in session.exercise_name_set():
+            if exercise_name in session.exercise_names_set():
                 x.append(session.date)
                 y.append(session.max_weight(exercise_name))
+                
+        return plot_tools.default_trace(name, x, y)
 
 
 
