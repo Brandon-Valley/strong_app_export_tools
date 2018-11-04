@@ -43,6 +43,7 @@ def build_row_dict_list(export_filename):
 
 
 
-# import main
-# if __name__ == '__main__':
-#     main.main()
+
+if __name__ == '__main__':
+    import main
+    main.main()
