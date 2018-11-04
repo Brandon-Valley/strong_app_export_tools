@@ -20,6 +20,10 @@ def main():
     #print (row_dl)
     # build_session_list(row_dl)
     
+    print('num sessions: ', wd.num_sessions())
+    print('last sesh exersise names: ', wd.session_list[-1].exercise_names_set())
+    
+    wd.print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
     print('Done!')
 
