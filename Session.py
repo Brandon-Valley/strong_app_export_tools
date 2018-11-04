@@ -39,13 +39,13 @@ class Session:
             
             
             
-    def exercise_names_set(self):
-        exercise_name_s = set([])
+    def exercise_names_list(self):
+        exercise_name_l = []
         
         for esb in self.exercise_set_block_list:
-            exercise_name_s.add(esb.exercise_name)
+            exercise_name_l.append(esb.exercise_name)
             
-        return exercise_name_s
+        return exercise_name_l
     
     
     
@@ -56,10 +56,10 @@ class Session:
             
             
             
-    def volume(self, exercise_name):
+    def total_volume(self, exercise_name):
         for esb in self.exercise_set_block_list:
             if esb.exercise_name == exercise_name:
-                return esb.volume() 
+                return esb.total_volume() 
     
     
                  

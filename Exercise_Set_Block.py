@@ -40,7 +40,7 @@ class Exercise_Set_Block:
 	
 	
 	
-	def volume(self):
+	def total_volume(self):
 		vol = 0
 		
 		for set in self.set_list:

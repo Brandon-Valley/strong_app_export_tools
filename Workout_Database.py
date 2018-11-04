@@ -47,28 +47,42 @@ class Workout_Database:
     
     
     
+    def exercise_names_list(self):
+        exercise_names_l = []
+        workout_names_s = set([])
+        
+        for session in self.session_list.__reversed__():
+            if session.workout_name not in workout_names_s:
+                workout_names_s.add(session.workout_name)
+                exercise_names_l += session.exercise_names_list()
+        return exercise_names_l
+            
+            
+            
+    
+    
     def get_trace___max_weight(self, exercise_name):
         name = exercise_name + ':  Max Weight' 
         x = [] # date
         y = [] # weight
         
         for session in self.session_list.__reversed__():
-            if exercise_name in session.exercise_names_set():
+            if exercise_name in session.exercise_names_list():
                 x.append(session.date)
                 y.append(session.max_weight(exercise_name))
                 
         return plot_tools.default_trace(name, x, y)
 
 
-    def get_trace___volume(self, exercise_name):
+    def get_trace___total_volume(self, exercise_name):
         name = exercise_name + ':  Volume' 
         x = [] # date
         y = [] # weight
         
         for session in self.session_list.__reversed__():
-            if exercise_name in session.exercise_names_set():
+            if exercise_name in session.exercise_names_list():
                 x.append(session.date)
-                y.append(session.volume(exercise_name))
+                y.append(session.total_volume(exercise_name))
                 
         return plot_tools.default_trace(name, x, y)
 

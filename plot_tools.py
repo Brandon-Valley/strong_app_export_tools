@@ -26,7 +26,7 @@ def plot_single_trace(title, filename, trace):
     
 def plot_trace_list(title, filename, trace_list):    
 
-    plotly.offline.plot({"data": track_list,
+    plotly.offline.plot({"data": trace_list,
                           "layout": go.Layout(title=title)}, filename=filename, auto_open=True)
     
     
