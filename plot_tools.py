@@ -23,7 +23,10 @@ def plot_single(title, filename, trace):
     
 #     fig['layout'].update(height=700, width=1500, title = title)
     
-    plotly.offline.plot([trace], filename=filename, auto_open=True)
+#     plotly.offline.plot([trace], filename=filename, auto_open=True)
+    
+    plotly.offline.plot({"data": [trace],
+                          "layout": go.Layout(title=title)}, filename=filename, auto_open=True)
     
     
     
