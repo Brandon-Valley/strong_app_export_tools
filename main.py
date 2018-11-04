@@ -25,6 +25,7 @@ def main():
     print('num sessions: ', wd.num_sessions())
     print('last sesh exersise names: ', wd.session_list[-1].exercise_names_list())
     print('all exercise names: ', wd.exercise_names_list())
+    print('workout names: ', wd.workout_names_list())
     
 #     wd.print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     

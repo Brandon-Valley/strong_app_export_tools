@@ -59,6 +59,14 @@ class Workout_Database:
             
             
             
+    def workout_names_list(self):
+        workout_names_l = []
+        
+        for session in self.session_list.__reversed__():
+            if session.workout_name not in workout_names_l:
+                workout_names_l.append(session.workout_name)
+        return workout_names_l
+            
     
     
     def get_trace___max_weight(self, exercise_name):
