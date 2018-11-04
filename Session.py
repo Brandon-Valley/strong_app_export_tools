@@ -53,6 +53,13 @@ class Session:
         for esb in self.exercise_set_block_list:
             if esb.exercise_name == exercise_name:
                 return esb.max_weight() 
+            
+            
+            
+    def volume(self, exercise_name):
+        for esb in self.exercise_set_block_list:
+            if esb.exercise_name == exercise_name:
+                return esb.volume() 
     
     
                  

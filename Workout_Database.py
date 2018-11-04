@@ -60,6 +60,19 @@ class Workout_Database:
         return plot_tools.default_trace(name, x, y)
 
 
+    def get_trace___volume(self, exercise_name):
+        name = exercise_name + ':  Volume' 
+        x = [] # date
+        y = [] # weight
+        
+        for session in self.session_list.__reversed__():
+            if exercise_name in session.exercise_names_set():
+                x.append(session.date)
+                y.append(session.volume(exercise_name))
+                
+        return plot_tools.default_trace(name, x, y)
+
+
 
 
 

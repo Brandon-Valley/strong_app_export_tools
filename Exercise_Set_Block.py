@@ -37,7 +37,16 @@ class Exercise_Set_Block:
 				max_weight = float(set.weight)
 		
 		return max_weight
+	
+	
+	
+	def volume(self):
+		vol = 0
 		
+		for set in self.set_list:
+			vol += float(set.reps) * float(set.weight)
+		
+		return vol
 		
 		
 		

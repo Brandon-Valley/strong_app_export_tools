@@ -18,14 +18,15 @@ def default_trace(name, x, y):
     return trace
 
 
-def plot_single(title, filename, trace):    
-#     fig.append_trace(trace)
-    
-#     fig['layout'].update(height=700, width=1500, title = title)
-    
-#     plotly.offline.plot([trace], filename=filename, auto_open=True)
-    
+def plot_single_trace(title, filename, trace):    
+
     plotly.offline.plot({"data": [trace],
+                          "layout": go.Layout(title=title)}, filename=filename, auto_open=True)
+    
+    
+def plot_trace_list(title, filename, trace_list):    
+
+    plotly.offline.plot({"data": track_list,
                           "layout": go.Layout(title=title)}, filename=filename, auto_open=True)
     
     
