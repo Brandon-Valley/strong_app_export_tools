@@ -17,11 +17,19 @@ def print_dict(dict):
 	
 	
 	
+# ('hi', 4) = 'hi  '
+def add_spaces_for_min_length(str, min_length):
+# 	if len(str) < min_length:
+# 		return str + ' ' * (1 + min_length - len(str))
+# 	else:
+# 		return str
+
+	while(len(str) < min_length):
+		str += ' '
+	return str
 	
 	
-	
-	
-	
+
 
 import main
 if __name__ == '__main__':
