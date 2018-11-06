@@ -1,4 +1,5 @@
 import Exercise_Set_Block
+import plot_tools
 
 #contains all Exersise_Set_Blocks for that workout 
 class Session:
@@ -59,7 +60,21 @@ class Session:
     def total_volume(self, exercise_name):
         for esb in self.exercise_set_block_list:
             if esb.exercise_name == exercise_name:
-                return esb.total_volume() 
+                return esb.total_volume()
+            
+            
+            
+    def exercise_hover_info(self, exercise_name):
+        hover_info = ''
+        
+        for esb in self.exercise_set_block_list:
+            if esb.exercise_name == exercise_name:
+                hover_info += 'Notes: ' + esb.notes
+                
+                for set in esb.set_list:
+                    hover_info +=  plot_tools.NEW_LINE + set.weight + ' ' + esb.weight_unit + ' x ' + set.reps  #'hi <br> hie /n hsiohf'
+                    
+        return hover_info 
     
     
                  

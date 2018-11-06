@@ -7,14 +7,22 @@ from plotly import tools
 import plotly.plotly as py
 
 
+NEW_LINE = '<br>'
 
 
-
-def default_trace(name, x, y):
-    trace = go.Scatter( name = name,
-                        x    = x,
-                        y    = y,
-                        mode = 'lines+markers' )
+def default_trace(name, x, y, hover_info_l = []):
+    if hover_info_l == []:
+        trace = go.Scatter( name = name,
+                            x    = x,
+                            y    = y,
+                            mode = 'lines+markers' )
+    else:
+        trace = go.Scatter( name = name,
+                            x    = x,
+                            y    = y,
+                            mode = 'lines+markers',
+                            text = hover_info_l,
+                            hoverinfo = 'text' )
     return trace
 
 

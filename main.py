@@ -29,17 +29,17 @@ def main():
     
 #     wd.print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
-#     GRAPH_TITLE = 'max weight vs vol test'
-#     GRAPH_FILENAME = 'max_weight_test' + arrow.now().format('YYYY-MM-DD') + '.html'
-#      
-#     trace1 = wd.get_trace___max_weight('"Squat (Barbell)"')
-#     plot_tools.plot_single(GRAPH_TITLE, GRAPH_FILENAME, trace)
+    GRAPH_TITLE = 'max weight vs vol test'
+    GRAPH_FILENAME = 'max_weight_test' + arrow.now().format('YYYY-MM-DD') + '.html'
+      
+    trace1 = wd.get_trace___max_weight('"Squat (Barbell)"')
+    plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace1)
 
-    GRAPH_TITLE = 'vol test'
-    GRAPH_FILENAME = 'vol_test' + arrow.now().format('YYYY-MM-DD') + '.html'
-    
-    trace2 = wd.get_trace___total_volume('"Squat (Barbell)"')
-    plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace2)
+#     GRAPH_TITLE = 'vol test'
+#     GRAPH_FILENAME = 'vol_test' + arrow.now().format('YYYY-MM-DD') + '.html'
+#     
+#     trace2 = wd.get_trace___total_volume('"Squat (Barbell)"')
+#     plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace2)
 
 #     plot_tools.plot_trace_list(GRAPH_TITLE, GRAPH_FILENAME, [trace1, trace2])
     
