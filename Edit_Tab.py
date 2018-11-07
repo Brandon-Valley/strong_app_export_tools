@@ -41,29 +41,38 @@ class Edit_Tab(Tab.Tab):
     def exercise_____widget_setup_and_grid(self, row_num):
         self.exercise_sel_d = {}
         
-        for i, q_exercise_name in enumerate(self.workout_database.exercise_names_list()):
-            exercise_name = tools.de_quote_str(q_exercise_name)
+        for i, exercise_name in enumerate(self.workout_database.exercise_names_list()):
+            nq_exercise_name = tools.de_quote_str(exercise_name)
             
-            exercise_cbtn_sel = IntVar(value = 1) #default to value
-            exercise_cbtn = Checkbutton(self.master, text= exercise_name, variable=exercise_cbtn_sel)
+            exercise_cbtn_sel = IntVar(value = 0) #default to value
+            exercise_cbtn = Checkbutton(self.master, text= nq_exercise_name, variable=exercise_cbtn_sel)
             
             exercise_cbtn.grid(column=1, row=row_num + i, sticky=N+S+W)
+            
+            self.exercise_sel_d[exercise_name] = exercise_cbtn_sel
         
+
 
     def plot_btn_____widget_setup(self):
         def plot_btn_clk():
             print('siudfhsiuhdfduhsouhfohdsolhfoihwsolrihfwolirhgoeihrgolehr')
             plot_kwargs = self.build_plot_kwargs()
             plot_data.plot_data(plot_kwargs)
-            
-            
-            
+        
         self.plot_btn = Button(self.master, text = 'PLOT', command = plot_btn_clk)
 
         
         
     def build_plot_kwargs(self):
-        plot_kwargs = {'plot_type': self.plot_type.get()}
+        # make list of all exercise names to include in plot
+        exercise_names_to_plot_l = []
+        for exercise_name, cbtn_sel in self.exercise_sel_d.items():
+            if cbtn_sel.get() == 1:
+                exercise_names_to_plot_l.append(exercise_name)
+        
+        
+        plot_kwargs = {'plot_type'               : self.plot_type.get(),
+                       'exercise_names_to_plot_l': exercise_names_to_plot_l}
         
         return plot_kwargs
         
