@@ -49,13 +49,3 @@ class Tab():
 import main
 if __name__ == '__main__':
     main.main()
-        
-        
-        
-        
-        
-        
-        
-        
-if __name__ == '__main__':
-    GUI.main()
