@@ -16,6 +16,7 @@ class Edit_Tab(Tab.Tab):
         Tab.Tab.__init__(self, master)
         
         self.plot_type_____widget_setup()
+        self.plot_btn_____widget_setup()
         
         self.grid_widgets()
         
@@ -31,6 +32,14 @@ class Edit_Tab(Tab.Tab):
         self.total_reps_rad_btn = Radiobutton(self.master,text='Total Reps   ', value='total_reps'  , variable = self.plot_type)
  
 
+
+    def plot_btn_____widget_setup(self):
+        def plot_btn_clk():
+            print('siudfhsiuhdfduhsouhfohdsolhfoihwsolrihfwolirhgoeihrgolehr')
+            
+            
+            
+        self.plot_btn = Button(self.master, text = 'PLOT', command = plot_btn_clk)
 
         
     def grid_widgets(self):
@@ -54,12 +63,17 @@ class Edit_Tab(Tab.Tab):
 #         
 #         row_num += 10
 #         
-#         blank_lbl                               .grid(column=1, row=row_num)
+        blank_lbl                               .grid(column=1, row=row_num)
+        
+        row_num += 10
+        
+        self.plot_btn                           .grid(column=1, row=row_num)
+
+        
 #         
 #         row_num += 10
 #         
 #         #input image background color
-#         self.input_bgnd_clr_lbl                 .grid(column=1, row=row_num)
 #         self.input_bgnd_clr_lbox                .grid(column=2, row=row_num)
 #         self.input_bgnd_clr_sbar                .grid(column=3, row=row_num, sticky=N+S+W)
 #         self.input_bgnd_clr_sel_btn             .grid(column=2, row=row_num + 1)
