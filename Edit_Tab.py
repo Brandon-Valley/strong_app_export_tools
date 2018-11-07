@@ -1,11 +1,4 @@
 from tkinter import *
-from tkinter.ttk import *
-from tkinter import filedialog
-import tkinter as tk
-from tkinter import ttk
-from tkinter.colorchooser import *
-
-from tkinter import *
 
 import Tab
 
@@ -104,21 +97,6 @@ class Edit_Tab(Tab.Tab):
         row_num += 10
         
         self.plot_btn                           .grid(column=1, row=row_num)
-
-        
-#         
-#         row_num += 10
-#         
-#         #input image background color
-#         self.input_bgnd_clr_lbox                .grid(column=2, row=row_num)
-#         self.input_bgnd_clr_sbar                .grid(column=3, row=row_num, sticky=N+S+W)
-#         self.input_bgnd_clr_sel_btn             .grid(column=2, row=row_num + 1)
-#         
-#         self.input_bgnd_clr_tup_tb              .grid(column=4, row=row_num)
-#         self.input_bgnd_clr_display_tb          .grid(column=5, row=row_num)
-#         
-#         self.trim_input_bgnd_clr_cbtn           .grid(column=2, row=row_num + 2)
-#         
 
 
 

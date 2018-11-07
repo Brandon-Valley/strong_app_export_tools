@@ -87,7 +87,7 @@ class Session:
                 hover_info += 'Notes: ' + esb.notes
                 
                 for set in esb.set_list:
-                    hover_info +=  plot_tools.NEW_LINE + str(float(set.weight)) + ' ' + esb.weight_unit + ' x ' + set.reps  #'hi <br> hie /n hsiohf'                  
+                    hover_info +=  plot_tools.NEW_LINE + str(float(set.weight)) + ' ' + esb.weight_unit + ' x ' + set.reps                
 
         return hover_info 
     

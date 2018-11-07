@@ -1,5 +1,3 @@
-# import GUI #only need for testing
-
 
 DIGITS = '0123456789.-'
 
