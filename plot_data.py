@@ -7,15 +7,15 @@ from twisted.test.raiser import raiseException
 
 
 def graph_title(plot_type, exercise_names_l):
-# #     graph_tile = ''
-#     graph_title = plot_type + ': ' + tools.de_quote_str( exercise_names_l.pop() )
-#     
-#     for exercise_name in exercise_names_l:
-#         graph_title += ' vs. ' + tools.de_quote_str( exercise_name )
-#         
-#     return graph_title
+#     graph_tile = ''
+    graph_title = plot_type + ': ' + tools.de_quote_str( exercise_names_l.pop() )
+     
+    for exercise_name in exercise_names_l:
+        graph_title += ' vs. ' + tools.de_quote_str( exercise_name )
+         
+    return graph_title
 
-    return 'sdoihfoidhosihfo' # fix !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#     return 'sdoihfoidhosihfo' # fix !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
     
     
@@ -29,7 +29,6 @@ def graph_filename(graph_title):
 # this is a really bad and stupid way of doing things but I am lazy and ill fix it later
 def get_trace(plot_type, exercise_name, wd):
     if   plot_type == 'Max Weight':
-        print ('max weight plot type !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         return wd.get_trace___max_weight(exercise_name)
     
     elif plot_type == 'Total Volume':
