@@ -22,9 +22,11 @@ def graph_title(plot_type, exercise_names_l):
     
 def graph_filename(graph_title):
 #     date = arrow.now().format('YYYY-MM-DD')
-#     filename = date + '___' + graph_title + '.html'
+#     filename = '_' + date + '___' + graph_title + '.html'
 #     return filename
-    return 'vol_test' + arrow.now().format('YYYY-MM-DD') + '.html' #fix!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# #     title = str(g)
+#     return arrow.now().format('YYYY-MM-DD')  + '.html' #fix!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    return 'temp.html'
     
 
 # this is a really bad and stupid way of doing things but I am lazy and ill fix it later
@@ -53,7 +55,7 @@ def plot_data(kwargs):
     
     title = graph_title(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'])
 #     print (title) #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    filename = graph_filename(graph_title)
+    filename = graph_filename(title)
     
     
     if len(kwargs['exercise_names_to_plot_l']) > 1:
