@@ -4,68 +4,22 @@ import Workout_Database
 import plot_tools
 import GUI
 
-import arrow
+
+
 
 export_filename = 'export.csv'
 output_filename = 'correct_export.csv'
 
 
-
-
-
-
 def main():
-#     tools.export_to_csv(export_filename, output_filename)
+    print('converting export to correct CSV...')
+    tools.export_to_csv(export_filename, output_filename)
     
+    print('building workout database...')
     wd = Workout_Database.Workout_Database(export_filename) 
     
-    
-    
+    print('starting gui...')
     GUI.build_gui(wd)
-    
-    
-    
-    #print (row_dl)
-    # build_session_list(row_dl)
-    
-    print('num sessions: ', wd.num_sessions())
-    print('last sesh exersise names: ', wd.session_list[-1].exercise_names_list())
-    print('all exercise names: ', wd.exercise_names_list())
-    print('workout names: ', wd.workout_names_list())
-    
-#     wd.print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
-#     GRAPH_TITLE = 'max weight vs vol test'
-#     GRAPH_FILENAME = 'max_weight_test' + arrow.now().format('YYYY-MM-DD') + '.html'
-#       
-#     trace1 = wd.get_trace___max_weight('"Squat (Barbell)"')
-#     plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace1)
-
-#     GRAPH_TITLE = 'vol test'
-#     GRAPH_FILENAME = 'vol_test' + arrow.now().format('YYYY-MM-DD') + '.html'
-#      
-#     trace2 = wd.get_trace___total_volume('"Squat (Barbell)"')
-#     plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace2)
-
-# 
-#     GRAPH_TITLE = 'max_reps test'
-#     GRAPH_FILENAME = 'max_reps_test' + arrow.now().format('YYYY-MM-DD') + '.html'
-#      
-#     trace3 = wd.get_trace___max_reps('"Squat (Barbell)"')
-#     plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace3)
-
-
-    GRAPH_TITLE = 'total_reps test'
-    GRAPH_FILENAME = 'total_reps_test' + arrow.now().format('YYYY-MM-DD') + '.html'
-     
-    trace4 = wd.get_trace___total_reps('"Squat (Barbell)"')
-    plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace4)
-
-#     plot_tools.plot_trace_list(GRAPH_TITLE, GRAPH_FILENAME, [trace1, trace2])
-    
-    
-
-    
     
     print('Done!')
 

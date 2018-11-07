@@ -7,7 +7,6 @@ from twisted.test.raiser import raiseException
 
 
 def graph_title(plot_type, exercise_names_l):
-#     graph_tile = ''
     graph_title = plot_type + ': ' + tools.de_quote_str( exercise_names_l[0] )
      
     
@@ -20,6 +19,8 @@ def graph_title(plot_type, exercise_names_l):
     
 #fix!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 def graph_filename(graph_title):
+#     GRAPH_FILENAME = 'max_reps_test' + arrow.now().format('YYYY-MM-DD') + '.html' # this works for some reason
+    
 #     date = arrow.now().format('YYYY-MM-DD')
 #     print (date)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #     print (graph_title)# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -50,7 +51,7 @@ def get_trace(plot_type, exercise_name, wd):
 
 
 def plot_data(kwargs):
-    tools.print_dict(kwargs)    
+#     tools.print_dict(kwargs)    
     
     title = graph_title(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'])
     filename = graph_filename(title)
@@ -61,11 +62,11 @@ def plot_data(kwargs):
         for exercise_name in kwargs['exercise_names_to_plot_l']:
             trace_list.append(get_trace(kwargs['plot_type'], exercise_name, kwargs['workout_database']))
         plot_tools.plot_trace_list(title, filename, trace_list)
-        
+         
     else:
         trace = get_trace(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'][0], kwargs['workout_database'])
         plot_tools.plot_single_trace(title, filename, trace)
-    
+     
     
     
     

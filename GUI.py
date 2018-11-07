@@ -43,7 +43,6 @@ def build_gui(workout_database):
     for tab_name, tab in tab_dict.items():
         tab.tabs = tab_dict
 
-#     print('in mainloop for gui')# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     root.mainloop()
 
 

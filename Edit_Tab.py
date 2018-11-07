@@ -55,7 +55,6 @@ class Edit_Tab(Tab.Tab):
 
     def plot_btn_____widget_setup(self):
         def plot_btn_clk():
-            print('siudfhsiuhdfduhsouhfohdsolhfoihwsolrihfwolirhgoeihrgolehr')#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             plot_kwargs = self.build_plot_kwargs()
             plot_data.plot_data(plot_kwargs)
         

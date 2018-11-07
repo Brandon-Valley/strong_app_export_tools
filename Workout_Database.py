@@ -13,10 +13,8 @@ class Workout_Database:
         
     def build_session_list(self, export_filename):
         set_dl = export_format.build_row_dict_list(export_filename) # list of dicts, each dict represents a set
-        print(set_dl)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         
         for set_d in set_dl:
-#             tools.print_dict(set_d)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             
             # decide if need to make new Session, if so, append curr_session and make new session, also set new curr_workout_name and curr_date
             if (self.session_list                  == [] or
