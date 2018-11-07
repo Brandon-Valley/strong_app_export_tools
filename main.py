@@ -15,7 +15,7 @@ output_filename = 'correct_export.csv'
 
 
 def main():
-    tools.export_to_csv(export_filename, output_filename)
+#     tools.export_to_csv(export_filename, output_filename)
     
     wd = Workout_Database.Workout_Database(export_filename) 
     

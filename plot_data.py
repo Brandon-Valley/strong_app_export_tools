@@ -16,16 +16,18 @@ def graph_title(plot_type, exercise_names_l):
          
     return graph_title
 
-#     return 'sdoihfoidhosihfo' # fix !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
     
-    
+#fix!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 def graph_filename(graph_title):
 #     date = arrow.now().format('YYYY-MM-DD')
-#     filename = '_' + date + '___' + graph_title + '.html'
+#     print (date)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#     print (graph_title)# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#     a = 'Max Weight Squat (Barbell)'
+#     filename = 'bbb_' + date + '___' + graph_title + '.html'
 #     return filename
 # #     title = str(g)
-#     return arrow.now().format('YYYY-MM-DD')  + '.html' #fix!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#     return arrow.now().format('YYYY-MM-DD')  + '.html' 
     return 'temp.html'
     
 
@@ -48,13 +50,9 @@ def get_trace(plot_type, exercise_name, wd):
 
 
 def plot_data(kwargs):
-    tools.print_dict(kwargs)
-    
-#     kwargs['workout_database'].print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
+    tools.print_dict(kwargs)    
     
     title = graph_title(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'])
-#     print (title) #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     filename = graph_filename(title)
     
     
@@ -66,7 +64,6 @@ def plot_data(kwargs):
         
     else:
         trace = get_trace(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'][0], kwargs['workout_database'])
-        print(trace.y) #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         plot_tools.plot_single_trace(title, filename, trace)
     
     
