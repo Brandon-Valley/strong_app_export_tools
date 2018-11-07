@@ -68,6 +68,27 @@ class Workout_Database:
         return workout_names_l
             
     
+    def get_trace(self, graph_name, key, exercise_name = None, hover_info = True):
+        x = [] # date
+        y = [] # weight / reps / ect...
+        hover_info_l = []
+        
+        for session in self.session_list.__reversed__():
+            if exercise_name in session.exercise_names_list():
+                x.append(session.date)
+                
+                if   key == 'max_weight':
+                    y.append(session.max_weight(exercise_name))
+                    
+                elif key == 'total_volume':
+                    y.append(session.total_volume(exercise_name))
+                
+                if hover_info == True:
+                    hover_info_l.append(session.exercise_hover_info(exercise_name))        
+                
+        return plot_tools.default_trace(graph_name, x, y, hover_info_l)
+    
+    
     
     def get_trace___max_weight(self, exercise_name, hover_info = True):
         name = exercise_name + ':  Max Weight' 
@@ -87,20 +108,23 @@ class Workout_Database:
 
 
     def get_trace___total_volume(self, exercise_name, hover_info = True):
-        name = exercise_name + ':  Volume' 
-        x = [] # date
-        y = [] # weight
-        hover_info_l = []
-        
-        for session in self.session_list.__reversed__():
-            if exercise_name in session.exercise_names_list():
-                x.append(session.date)
-                y.append(session.total_volume(exercise_name))
-                
-                if hover_info == True:
-                    hover_info_l.append(session.exercise_hover_info(exercise_name))        
-                
-        return plot_tools.default_trace(name, x, y, hover_info_l)
+#         name = exercise_name + ':  Volume' 
+#         x = [] # date
+#         y = [] # weight
+#         hover_info_l = []
+#         
+#         for session in self.session_list.__reversed__():
+#             if exercise_name in session.exercise_names_list():
+#                 x.append(session.date)
+#                 y.append(session.total_volume(exercise_name))
+#                 
+#                 if hover_info == True:
+#                     hover_info_l.append(session.exercise_hover_info(exercise_name))        
+#                 
+#         return plot_tools.default_trace(name, x, y, hover_info_l)
+        graph_name = exercise_name + ':  Total Volume' 
+        key = 'total_volume'
+        return self.get_trace(graph_name, key, exercise_name, hover_info)
 
 
 
