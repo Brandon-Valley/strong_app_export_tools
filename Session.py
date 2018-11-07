@@ -72,6 +72,12 @@ class Session:
                 return esb.max_reps()
             
             
+    def total_reps(self, exercise_name):
+        for esb in self.exercise_set_block_list:
+            if esb.exercise_name == exercise_name:
+                return esb.total_reps()
+            
+            
             
     def exercise_hover_info(self, exercise_name):
         hover_info = ''

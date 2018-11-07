@@ -85,6 +85,9 @@ class Workout_Database:
                     
                 elif key == 'max_reps':
                     y.append(session.max_reps(exercise_name))
+                    
+                elif key == 'total_reps':
+                    y.append(session.total_reps(exercise_name))
                 
                 
                 if hover_info == True:
@@ -109,6 +112,12 @@ class Workout_Database:
     def get_trace___max_reps(self, exercise_name, hover_info = True):
         trace_name = exercise_name + ':  Max Reps' 
         key = 'max_reps'
+        return self.get_trace(trace_name, key, exercise_name, hover_info)
+    
+    
+    def get_trace___total_reps(self, exercise_name, hover_info = True):
+        trace_name = exercise_name + ':  Total Reps' 
+        key = 'total_reps'
         return self.get_trace(trace_name, key, exercise_name, hover_info)
 
 

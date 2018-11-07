@@ -35,7 +35,6 @@ class Exercise_Set_Block:
 		for set in self.set_list:
 			if float(set.weight) > max_weight:
 				max_weight = float(set.weight)
-		
 		return max_weight
 	
 	
@@ -45,7 +44,6 @@ class Exercise_Set_Block:
 		
 		for set in self.set_list:
 			vol += float(set.reps) * float(set.weight)
-			
 		return vol
 		
 		
@@ -56,9 +54,16 @@ class Exercise_Set_Block:
 		for set in self.set_list:
 			if int(set.reps) > max_reps:
 				max_reps = int(set.reps)
-		
 		return max_reps
 		
+		
+		
+	def total_reps(self):
+		total_reps = 0
+		
+		for set in self.set_list:
+			total_reps += int(set.reps)
+		return total_reps
 		
 		
 		
