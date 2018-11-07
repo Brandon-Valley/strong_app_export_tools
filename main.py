@@ -2,6 +2,7 @@ import tools
 import export_format
 import Workout_Database
 import plot_tools
+import GUI
 
 import arrow
 
@@ -17,6 +18,11 @@ def main():
     tools.export_to_csv(export_filename, output_filename)
     
     wd = Workout_Database.Workout_Database(export_filename) 
+    
+    
+    
+    GUI.build_gui(wd)
+    
     
     
     #print (row_dl)
@@ -58,7 +64,7 @@ def main():
 #     plot_tools.plot_trace_list(GRAPH_TITLE, GRAPH_FILENAME, [trace1, trace2])
     
     
-    
+
     
     
     print('Done!')
