@@ -99,7 +99,7 @@ class Workout_Database:
     
     def get_trace___max_weight(self, exercise_name, hover_info = True):
         trace_name = exercise_name + ':  Max Weight' 
-        key = 'max_weigt'
+        key = 'max_weight'
         return self.get_trace(trace_name, key, exercise_name, hover_info)
 
 

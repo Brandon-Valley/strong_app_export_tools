@@ -30,11 +30,11 @@ class Edit_Tab(Tab.Tab):
 
     def plot_type_____widget_setup(self):
         self.plot_type  = StringVar()
-        self.plot_type.set("max_weight") #default
-        self.max_weight_rad_btn = Radiobutton(self.master,text='Max Weight'   , value='max_weight'  , variable = self.plot_type)
-        self.total_vol_rad_btn  = Radiobutton(self.master,text='Total Volume' , value='total_volume', variable = self.plot_type)
-        self.max_reps_rad_btn   = Radiobutton(self.master,text='Max Reps'     , value='max_reps'    , variable = self.plot_type)
-        self.total_reps_rad_btn = Radiobutton(self.master,text='Total Reps'   , value='total_reps'  , variable = self.plot_type)
+        self.plot_type.set("Max Weight") #default
+        self.max_weight_rad_btn = Radiobutton(self.master,text='Max Weight'   , value='Max Weight'  , variable = self.plot_type)
+        self.total_vol_rad_btn  = Radiobutton(self.master,text='Total Volume' , value='Total Volume', variable = self.plot_type)
+        self.max_reps_rad_btn   = Radiobutton(self.master,text='Max Reps'     , value='Max Reps'    , variable = self.plot_type)
+        self.total_reps_rad_btn = Radiobutton(self.master,text='Total Reps'   , value='Total Reps'  , variable = self.plot_type)
  
  
         
@@ -55,7 +55,7 @@ class Edit_Tab(Tab.Tab):
 
     def plot_btn_____widget_setup(self):
         def plot_btn_clk():
-            print('siudfhsiuhdfduhsouhfohdsolhfoihwsolrihfwolirhgoeihrgolehr')
+            print('siudfhsiuhdfduhsouhfohdsolhfoihwsolrihfwolirhgoeihrgolehr')#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             plot_kwargs = self.build_plot_kwargs()
             plot_data.plot_data(plot_kwargs)
         
@@ -72,6 +72,7 @@ class Edit_Tab(Tab.Tab):
         
         
         plot_kwargs = {'plot_type'               : self.plot_type.get(),
+                       'workout_database'        : self.workout_database,
                        'exercise_names_to_plot_l': exercise_names_to_plot_l}
         
         return plot_kwargs
