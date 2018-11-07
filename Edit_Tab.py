@@ -38,12 +38,12 @@ class Edit_Tab(Tab.Tab):
             nq_exercise_name = tools.de_quote_str(exercise_name)
             
             exercise_cbtn_sel = IntVar(value = 0) #default to value
-            exercise_cbtn = Checkbutton(self.master, text= nq_exercise_name, variable=exercise_cbtn_sel)
+            exercise_cbtn = Checkbutton(self.master, text= nq_exercise_name, variable=exercise_cbtn_sel, command = self.update_plot_btn_state)
             
             exercise_cbtn.grid(column=1, row=row_num + i, sticky=N+S+W)
             
             self.exercise_sel_d[exercise_name] = exercise_cbtn_sel
-        
+
 
 
     def plot_btn_____widget_setup(self):
@@ -52,7 +52,16 @@ class Edit_Tab(Tab.Tab):
             plot_data.plot_data(plot_kwargs)
         
         self.plot_btn = Button(self.master, text = 'PLOT', command = plot_btn_clk)
+        self.plot_btn.configure( state = 'disabled' ) #off by default
 
+
+
+    def update_plot_btn_state(self):
+        self.plot_btn.configure( state = 'disabled' )
+        
+        for exercise_name, cbtn in self.exercise_sel_d.items():
+            if cbtn.get() == 1:
+                self.plot_btn.configure( state = 'normal' )
         
         
     def build_plot_kwargs(self):
