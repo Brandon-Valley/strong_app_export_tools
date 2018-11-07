@@ -8,9 +8,10 @@ from twisted.test.raiser import raiseException
 
 def graph_title(plot_type, exercise_names_l):
 #     graph_tile = ''
-    graph_title = plot_type + ': ' + tools.de_quote_str( exercise_names_l.pop() )
+    graph_title = plot_type + ': ' + tools.de_quote_str( exercise_names_l[0] )
      
-    for exercise_name in exercise_names_l:
+    
+    for exercise_name in exercise_names_l[1:]:
         graph_title += ' vs. ' + tools.de_quote_str( exercise_name )
          
     return graph_title
@@ -47,7 +48,7 @@ def get_trace(plot_type, exercise_name, wd):
 def plot_data(kwargs):
     tools.print_dict(kwargs)
     
-    kwargs['workout_database'].print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#     kwargs['workout_database'].print_me()#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     
     
     title = graph_title(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'])
@@ -65,12 +66,6 @@ def plot_data(kwargs):
         trace = get_trace(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'][0], kwargs['workout_database'])
         print(trace.y) #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         plot_tools.plot_single_trace(title, filename, trace)
-    
-    
-    
-    
-    
-    
     
     
     
