@@ -35,11 +35,18 @@ def main():
 #     trace1 = wd.get_trace___max_weight('"Squat (Barbell)"')
 #     plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace1)
 
-    GRAPH_TITLE = 'vol test'
-    GRAPH_FILENAME = 'vol_test' + arrow.now().format('YYYY-MM-DD') + '.html'
+#     GRAPH_TITLE = 'vol test'
+#     GRAPH_FILENAME = 'vol_test' + arrow.now().format('YYYY-MM-DD') + '.html'
+#      
+#     trace2 = wd.get_trace___total_volume('"Squat (Barbell)"')
+#     plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace2)
+
+
+    GRAPH_TITLE = 'max_reps test'
+    GRAPH_FILENAME = 'max_reps_test' + arrow.now().format('YYYY-MM-DD') + '.html'
      
-    trace2 = wd.get_trace___total_volume('"Squat (Barbell)"')
-    plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace2)
+    trace3 = wd.get_trace___max_reps('"Squat (Barbell)"')
+    plot_tools.plot_single_trace(GRAPH_TITLE, GRAPH_FILENAME, trace3)
 
 #     plot_tools.plot_trace_list(GRAPH_TITLE, GRAPH_FILENAME, [trace1, trace2])
     
