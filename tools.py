@@ -28,6 +28,11 @@ def add_spaces_for_min_length(str, min_length):
 		str += ' '
 	return str
 	
+    
+    
+def de_quote_str(str):
+    if len(str) != 0 and str[0] == str[-1] == '"':
+        return str[1:-1]    
 	
 
 

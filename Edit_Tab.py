@@ -10,6 +10,7 @@ from tkinter import *
 import Tab
 
 import plot_data
+import tools
 
 
 
@@ -35,10 +36,18 @@ class Edit_Tab(Tab.Tab):
         self.max_reps_rad_btn   = Radiobutton(self.master,text='Max Reps'     , value='max_reps'    , variable = self.plot_type)
         self.total_reps_rad_btn = Radiobutton(self.master,text='Total Reps'   , value='total_reps'  , variable = self.plot_type)
  
+ 
         
     def exercise_____widget_setup_and_grid(self, row_num):
-        for q_exercise_name in self.workout_database.exercise_names_list():
-            exercise_cbtn = Checkbutton(self.master, text= q_exercise_name, variable=trim_input_bgnd_clr_cbtn_sel)
+        self.exercise_sel_d = {}
+        
+        for i, q_exercise_name in enumerate(self.workout_database.exercise_names_list()):
+            exercise_name = tools.de_quote_str(q_exercise_name)
+            
+            exercise_cbtn_sel = IntVar(value = 1) #default to value
+            exercise_cbtn = Checkbutton(self.master, text= exercise_name, variable=exercise_cbtn_sel)
+            
+            exercise_cbtn.grid(column=1, row=row_num + i, sticky=N+S+W)
         
 
     def plot_btn_____widget_setup(self):
@@ -52,6 +61,7 @@ class Edit_Tab(Tab.Tab):
         self.plot_btn = Button(self.master, text = 'PLOT', command = plot_btn_clk)
 
         
+        
     def build_plot_kwargs(self):
         plot_kwargs = {'plot_type': self.plot_type.get()}
         
@@ -59,7 +69,8 @@ class Edit_Tab(Tab.Tab):
         
         
     def grid_widgets(self):
-        blank_lbl = Label(self.master, text="") #for spacing 
+        blank_lbl_1 = Label(self.master, text="") #for spacing 
+        blank_lbl_2 = Label(self.master, text="") #for spacing 
         
         row_num = 10
         
@@ -71,7 +82,15 @@ class Edit_Tab(Tab.Tab):
         
         row_num += 10
 
-        blank_lbl                               .grid(column=1, row=row_num)
+        blank_lbl_1                            .grid(column=1, row=row_num)
+        
+        row_num += 10
+        
+        self.exercise_____widget_setup_and_grid(row_num)
+        
+        row_num += 10
+        
+        blank_lbl_2                             .grid(column=1, row=row_num)
         
         row_num += 10
         
