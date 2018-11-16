@@ -67,7 +67,7 @@ class Session:
     def total_volume(self, exercise_name, correct_weight):
         for esb in self.exercise_set_block_list:
             if esb.exercise_name == exercise_name:
-                return esb.total_volume()
+                return esb.total_volume(correct_weight)
             
             
     def max_reps(self, exercise_name):

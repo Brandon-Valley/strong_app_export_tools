@@ -1,4 +1,5 @@
 import Set
+import weight_correction
 
 class Exercise_Set_Block:
 	def __init__(self, set_d):
@@ -39,11 +40,16 @@ class Exercise_Set_Block:
 	
 	
 	
-	def total_volume(self):
+	def total_volume(self, correct_weight):
 		vol = 0
 		
 		for set in self.set_list:
-			vol += float(set.reps) * float(set.weight)
+			if correct_weight == 1:
+				cur_weight = weight_correction.correct_weight(self.exercise_name, float(set.weight) )
+			else:
+				cur_wight = float(set.weight)
+			
+			vol += float(set.reps) * cur_weight
 		return vol
 		
 		
