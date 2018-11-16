@@ -33,25 +33,25 @@ def graph_filename(graph_title):
     
 
 # this is a really bad and stupid way of doing things but I am lazy and ill fix it later
-def get_trace(plot_type, exercise_name, wd):
+def get_trace(plot_type, exercise_name, wd, correct_weight):
     if   plot_type == 'Max Weight':
-        return wd.get_trace___max_weight(exercise_name)
+        return wd.get_trace___max_weight(exercise_name, correct_weight)
     
     elif plot_type == 'Total Volume':
-        return wd.get_trace___total_volume(exercise_name)
+        return wd.get_trace___total_volume(exercise_name, correct_weight)
     
     elif plot_type == 'Max Reps':
-        return wd.get_trace___max_reps(exercise_name)
+        return wd.get_trace___max_reps(exercise_name, correct_weight)
     
     elif plot_type == 'Total Reps':
-        return wd.get_trace___total_reps(exercise_name)
+        return wd.get_trace___total_reps(exercise_name, correct_weight)
     
     else: 
         raiseException('invalid plot_type: ', plot_type)
 
 
 def plot_data(kwargs):
-    tools.print_dict(kwargs)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
+#     tools.print_dict(kwargs)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
     
     title = graph_title(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'])
     filename = graph_filename(title)
@@ -60,11 +60,11 @@ def plot_data(kwargs):
     if len(kwargs['exercise_names_to_plot_l']) > 1:
         trace_list = []
         for exercise_name in kwargs['exercise_names_to_plot_l']:
-            trace_list.append(get_trace(kwargs['plot_type'], exercise_name, kwargs['workout_database']))
+            trace_list.append(get_trace(kwargs['plot_type'], exercise_name, kwargs['workout_database'], kwargs['correct_weight']))
         plot_tools.plot_trace_list(title, filename, trace_list)
          
     else:
-        trace = get_trace(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'][0], kwargs['workout_database'])
+        trace = get_trace(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'][0], kwargs['workout_database'], kwargs['correct_weight'])
         plot_tools.plot_single_trace(title, filename, trace)
      
     

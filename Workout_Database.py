@@ -66,7 +66,7 @@ class Workout_Database:
         return workout_names_l
             
     
-    def get_trace(self, trace_name, key, exercise_name = None, hover_info = True):
+    def get_trace(self, trace_name, key, exercise_name, correct_weight, hover_info = True):
         x = [] # date
         y = [] # weight / reps / ect...
         hover_info_l = []
@@ -76,10 +76,10 @@ class Workout_Database:
                 x.append(session.date)
                 
                 if   key == 'max_weight':
-                    y.append(session.max_weight(exercise_name))
+                    y.append(session.max_weight(exercise_name, correct_weight))
                     
                 elif key == 'total_volume':
-                    y.append(session.total_volume(exercise_name))
+                    y.append(session.total_volume(exercise_name, correct_weight))
                     
                 elif key == 'max_reps':
                     y.append(session.max_reps(exercise_name))
@@ -95,10 +95,10 @@ class Workout_Database:
     
     
     
-    def get_trace___max_weight(self, exercise_name, hover_info = True):
+    def get_trace___max_weight(self, exercise_name, correct_weight, hover_info = True ):
         trace_name = exercise_name + ':  Max Weight' 
         key = 'max_weight'
-        return self.get_trace(trace_name, key, exercise_name, hover_info)
+        return self.get_trace(trace_name, key, exercise_name, correct_weight, hover_info)
 
 
     def get_trace___total_volume(self, exercise_name, hover_info = True):
