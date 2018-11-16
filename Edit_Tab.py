@@ -14,6 +14,7 @@ class Edit_Tab(Tab.Tab):
         self.workout_database = workout_database
         
         self.plot_type_____widget_setup()
+        self.correct_weight_____widget_setup()
         self.plot_btn_____widget_setup()
         
         self.grid_widgets()
@@ -28,6 +29,12 @@ class Edit_Tab(Tab.Tab):
         self.total_vol_rad_btn  = Radiobutton(self.master,text='Total Volume' , value='Total Volume', variable = self.plot_type)
         self.max_reps_rad_btn   = Radiobutton(self.master,text='Max Reps'     , value='Max Reps'    , variable = self.plot_type)
         self.total_reps_rad_btn = Radiobutton(self.master,text='Total Reps'   , value='Total Reps'  , variable = self.plot_type)
+ 
+ 
+ 
+    def correct_weight_____widget_setup(self):
+        self.correct_weight_cbtn_sel = IntVar(value = 1) #default to value
+        self.correct_weight_cbtn = Checkbutton(self.master, text= 'Correct Weight', variable=self.correct_weight_cbtn_sel)
  
  
         
@@ -74,14 +81,17 @@ class Edit_Tab(Tab.Tab):
         
         plot_kwargs = {'plot_type'               : self.plot_type.get(),
                        'workout_database'        : self.workout_database,
+                       'correct_weight'          : self.correct_weight_cbtn_sel.get(),
                        'exercise_names_to_plot_l': exercise_names_to_plot_l}
+        
         
         return plot_kwargs
         
         
     def grid_widgets(self):
         blank_lbl_1 = Label(self.master, text="") #for spacing 
-        blank_lbl_2 = Label(self.master, text="") #for spacing 
+        blank_lbl_2 = Label(self.master, text="") #for spacing
+        blank_lbl_3 = Label(self.master, text="") #for spacing 
         
         row_num = 10
         
@@ -101,7 +111,15 @@ class Edit_Tab(Tab.Tab):
         
         row_num += 10
         
-        blank_lbl_2                             .grid(column=1, row=row_num)
+        blank_lbl_2                            .grid(column=1, row=row_num)
+        
+        row_num += 10
+        
+        self.correct_weight_cbtn               .grid(column=1, row=row_num, sticky=N+S+W)
+        
+        row_num += 10
+        
+        blank_lbl_3                             .grid(column=1, row=row_num)
         
         row_num += 10
         

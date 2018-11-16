@@ -51,7 +51,7 @@ def get_trace(plot_type, exercise_name, wd):
 
 
 def plot_data(kwargs):
-#     tools.print_dict(kwargs)    
+    tools.print_dict(kwargs)#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
     
     title = graph_title(kwargs['plot_type'], kwargs['exercise_names_to_plot_l'])
     filename = graph_filename(title)
