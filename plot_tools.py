@@ -5,6 +5,7 @@ import datetime as dt
 
 from plotly import tools
 import plotly.plotly as py
+from plotly.presentation_objs.presentation_objs import PRES_THEMES
 
 
 NEW_LINE = '<br>'
