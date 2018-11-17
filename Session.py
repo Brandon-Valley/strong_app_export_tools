@@ -1,7 +1,7 @@
 import Exercise_Set_Block
 import plot_tools
 import tools
-import weight_correction
+
 
 MAX_WEIGHT_CHARS = 6
 
@@ -57,10 +57,7 @@ class Session:
     def max_weight(self, exercise_name, correct_weight):
         for esb in self.exercise_set_block_list:
             if esb.exercise_name == exercise_name:
-                if correct_weight == 1:
-                    return weight_correction.correct_weight(exercise_name, esb.max_weight())
-                else:
-                    return esb.max_weight() 
+                return esb.max_weight(correct_weight) 
             
             
             

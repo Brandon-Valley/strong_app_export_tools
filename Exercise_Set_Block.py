@@ -1,5 +1,6 @@
 import Set
 import weight_correction
+from _decimal import MAX_EMAX
 
 class Exercise_Set_Block:
 	def __init__(self, set_d):
@@ -30,14 +31,18 @@ class Exercise_Set_Block:
 				set.print_me(indent, init_indent + indent *2)
 	
 	
-	def max_weight(self):
+	def max_weight(self, correct_weight):
 		max_weight = 0
 		
 		for set in self.set_list:
 			if float(set.weight) > max_weight:
 				max_weight = float(set.weight)
-		return max_weight
-	
+				
+		if correct_weight == 1:
+			return weight_correction.correct_weight(self.exercise_name, max_weight )
+		else:
+			return max_weight
+			
 	
 	
 	def total_volume(self, correct_weight):
