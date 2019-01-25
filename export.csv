@@ -1,4 +1,130 @@
 Date;Workout Name;Exercise Name;Set Order;Weight;Weight Unit;Reps;Distance;Distance Unit;Seconds;Notes;Workout Notes
+2019-01-20 17:03:17;"Indoor Bike";"Cycling (Indoor)";1;;;;2.4;mi.;2100;"";""
+2019-01-19 14:40:04;"A";"Deadlift (Barbell)";1;85;lbs;5;;;0;"";""
+2019-01-19 14:40:04;"A";"Deadlift (Barbell)";2;95;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Deadlift (Barbell)";3;105;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Deadlift (Barbell)";4;115;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Deadlift (Barbell)";5;125;lbs;6;;;0;;
+2019-01-19 14:40:04;"A";"Bent Over Row (Dumbbell)";1;30;lbs;5;;;0;"";
+2019-01-19 14:40:04;"A";"Bent Over Row (Dumbbell)";2;35;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Bent Over Row (Dumbbell)";3;40;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Bent Over Row (Dumbbell)";4;45;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Bent Over Row (Dumbbell)";5;50;lbs;7;;;0;;
+2019-01-19 14:40:04;"A";"Overhead Press (Dumbbell)";1;22.5;lbs;5;;;0;"";
+2019-01-19 14:40:04;"A";"Overhead Press (Dumbbell)";2;25;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Overhead Press (Dumbbell)";3;27.5;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Overhead Press (Dumbbell)";4;30;lbs;5;;;0;;
+2019-01-19 14:40:04;"A";"Overhead Press (Dumbbell)";5;35;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Squat (Barbell)";1;25;lbs;5;;;0;"DIFF:  bench, pull up, squat";""
+2019-01-15 15:16:39;"B";"Squat (Barbell)";2;27.5;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Squat (Barbell)";3;30;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Squat (Barbell)";4;32.5;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Squat (Barbell)";5;35;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Bench Press (Dumbbell)";1;27.5;lbs;5;;;0;"DIFF:  bench, pull up, squat";
+2019-01-15 15:16:39;"B";"Bench Press (Dumbbell)";2;30;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Bench Press (Dumbbell)";3;35;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Bench Press (Dumbbell)";4;40;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Bench Press (Dumbbell)";5;45;lbs;5;;;0;;
+2019-01-15 15:16:39;"B";"Pull Up";1;0;lbs;12;;;0;"DIFF:  bench, pull up, squat";
+2019-01-15 15:16:39;"B";"Pull Up";2;0;lbs;7;;;0;;
+2018-12-20 19:38:15;"Indoor Bike";"Cycling (Indoor)";1;;;;10.5;mi.;2100;"";""
+2018-12-19 19:27:56;"A";"Deadlift (Barbell)";1;85;lbs;5;;;0;"";"FAST: D1"
+2018-12-19 19:27:56;"A";"Deadlift (Barbell)";2;95;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Deadlift (Barbell)";3;105;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Deadlift (Barbell)";4;115;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Deadlift (Barbell)";5;125;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Bent Over Row (Dumbbell)";1;30;lbs;5;;;0;"";
+2018-12-19 19:27:56;"A";"Bent Over Row (Dumbbell)";2;35;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Bent Over Row (Dumbbell)";3;40;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Bent Over Row (Dumbbell)";4;45;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Bent Over Row (Dumbbell)";5;50;lbs;7;;;0;;
+2018-12-19 19:27:56;"A";"Overhead Press (Dumbbell)";1;22.5;lbs;5;;;0;"";
+2018-12-19 19:27:56;"A";"Overhead Press (Dumbbell)";2;25;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Overhead Press (Dumbbell)";3;27.5;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Overhead Press (Dumbbell)";4;30;lbs;5;;;0;;
+2018-12-19 19:27:56;"A";"Overhead Press (Dumbbell)";5;35;lbs;6;;;0;;
+2018-12-11 16:49:18;"B";"Squat (Barbell)";1;25;lbs;5;;;0;"";"DIFF:  bench, pull up, squat"
+2018-12-11 16:49:18;"B";"Squat (Barbell)";2;27.5;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Squat (Barbell)";3;30;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Squat (Barbell)";4;32.5;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Squat (Barbell)";5;35;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Bench Press (Dumbbell)";1;27.5;lbs;5;;;0;"";
+2018-12-11 16:49:18;"B";"Bench Press (Dumbbell)";2;30;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Bench Press (Dumbbell)";3;35;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Bench Press (Dumbbell)";4;40;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Bench Press (Dumbbell)";5;45;lbs;5;;;0;;
+2018-12-11 16:49:18;"B";"Pull Up";1;0;lbs;14;;;0;"";
+2018-12-11 16:49:18;"B";"Pull Up";2;0;lbs;7;;;0;;
+2018-11-15 16:53:18;"A";"Deadlift (Barbell)";1;85;lbs;5;;;0;"";""
+2018-11-15 16:53:18;"A";"Deadlift (Barbell)";2;95;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Deadlift (Barbell)";3;105;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Deadlift (Barbell)";4;115;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Deadlift (Barbell)";5;125;lbs;9;;;0;;
+2018-11-15 16:53:18;"A";"Bent Over Row (Dumbbell)";1;30;lbs;5;;;0;"";
+2018-11-15 16:53:18;"A";"Bent Over Row (Dumbbell)";2;35;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Bent Over Row (Dumbbell)";3;40;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Bent Over Row (Dumbbell)";4;45;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Bent Over Row (Dumbbell)";5;50;lbs;7;;;0;;
+2018-11-15 16:53:18;"A";"Overhead Press (Dumbbell)";1;22.5;lbs;5;;;0;"";
+2018-11-15 16:53:18;"A";"Overhead Press (Dumbbell)";2;25;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Overhead Press (Dumbbell)";3;27.5;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Overhead Press (Dumbbell)";4;30;lbs;5;;;0;;
+2018-11-15 16:53:18;"A";"Overhead Press (Dumbbell)";5;35;lbs;8;;;0;;
+2018-11-11 17:06:44;"B";"Squat (Barbell)";1;25;lbs;5;;;0;"";""
+2018-11-11 17:06:44;"B";"Squat (Barbell)";2;27.5;lbs;5;;;0;;
+2018-11-11 17:06:44;"B";"Squat (Barbell)";3;30;lbs;5;;;0;;
+2018-11-11 17:06:44;"B";"Squat (Barbell)";4;32.5;lbs;5;;;0;;
+2018-11-11 17:06:44;"B";"Squat (Barbell)";5;35;lbs;10;;;0;;
+2018-11-11 17:06:44;"B";"Bench Press (Dumbbell)";1;27.5;lbs;5;;;0;"";
+2018-11-11 17:06:44;"B";"Bench Press (Dumbbell)";2;30;lbs;5;;;0;;
+2018-11-11 17:06:44;"B";"Bench Press (Dumbbell)";3;35;lbs;5;;;0;;
+2018-11-11 17:06:44;"B";"Bench Press (Dumbbell)";4;40;lbs;5;;;0;;
+2018-11-11 17:06:44;"B";"Bench Press (Dumbbell)";5;45;lbs;6;;;0;;
+2018-11-11 17:06:44;"B";"Pull Up";1;0;lbs;14;;;0;"";
+2018-11-11 17:06:44;"B";"Pull Up";2;0;lbs;6;;;0;;
+2018-11-07 17:53:05;"A";"Deadlift (Barbell)";1;85;lbs;5;;;0;"";""
+2018-11-07 17:53:05;"A";"Deadlift (Barbell)";2;95;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Deadlift (Barbell)";3;105;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Deadlift (Barbell)";4;115;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Deadlift (Barbell)";5;125;lbs;7;;;0;;
+2018-11-07 17:53:05;"A";"Bent Over Row (Dumbbell)";1;30;lbs;5;;;0;"";
+2018-11-07 17:53:05;"A";"Bent Over Row (Dumbbell)";2;35;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Bent Over Row (Dumbbell)";3;40;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Bent Over Row (Dumbbell)";4;45;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Bent Over Row (Dumbbell)";5;50;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Overhead Press (Dumbbell)";1;22.5;lbs;5;;;0;"";
+2018-11-07 17:53:05;"A";"Overhead Press (Dumbbell)";2;25;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Overhead Press (Dumbbell)";3;27.5;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Overhead Press (Dumbbell)";4;30;lbs;5;;;0;;
+2018-11-07 17:53:05;"A";"Overhead Press (Dumbbell)";5;35;lbs;3;;;0;;
+2018-11-05 16:06:40;"B";"Squat (Barbell)";1;25;lbs;5;;;0;"";""
+2018-11-05 16:06:40;"B";"Squat (Barbell)";2;27.5;lbs;5;;;0;;
+2018-11-05 16:06:40;"B";"Squat (Barbell)";3;30;lbs;5;;;0;;
+2018-11-05 16:06:40;"B";"Squat (Barbell)";4;32.5;lbs;5;;;0;;
+2018-11-05 16:06:40;"B";"Squat (Barbell)";5;35;lbs;6;;;0;;
+2018-11-05 16:06:40;"B";"Bench Press (Dumbbell)";1;27.5;lbs;5;;;0;"";
+2018-11-05 16:06:40;"B";"Bench Press (Dumbbell)";2;30;lbs;5;;;0;;
+2018-11-05 16:06:40;"B";"Bench Press (Dumbbell)";3;35;lbs;5;;;0;;
+2018-11-05 16:06:40;"B";"Bench Press (Dumbbell)";4;40;lbs;5;;;0;;
+2018-11-05 16:06:40;"B";"Bench Press (Dumbbell)";5;45;lbs;6;;;0;;
+2018-11-05 16:06:40;"B";"Pull Up";1;0;lbs;13;;;0;"";
+2018-11-05 16:06:40;"B";"Pull Up";2;0;lbs;6;;;0;;
+2018-11-02 16:53:36;"A";"Deadlift (Barbell)";1;85;lbs;5;;;0;"";""
+2018-11-02 16:53:36;"A";"Deadlift (Barbell)";2;95;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Deadlift (Barbell)";3;105;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Deadlift (Barbell)";4;115;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Deadlift (Barbell)";5;125;lbs;9;;;0;;
+2018-11-02 16:53:36;"A";"Bent Over Row (Dumbbell)";1;27.5;lbs;5;;;0;"";
+2018-11-02 16:53:36;"A";"Bent Over Row (Dumbbell)";2;30;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Bent Over Row (Dumbbell)";3;35;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Bent Over Row (Dumbbell)";4;40;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Bent Over Row (Dumbbell)";5;45;lbs;10;;;0;;
+2018-11-02 16:53:36;"A";"Overhead Press (Dumbbell)";1;22.5;lbs;5;;;0;"";
+2018-11-02 16:53:36;"A";"Overhead Press (Dumbbell)";2;25;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Overhead Press (Dumbbell)";3;27.5;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Overhead Press (Dumbbell)";4;30;lbs;5;;;0;;
+2018-11-02 16:53:36;"A";"Overhead Press (Dumbbell)";5;35;lbs;6;;;0;;
+2018-11-01 17:25:57;"Indoor Bike";"Cycling (Indoor)";1;;;;10.5;mi.;35;"";""
 2018-10-31 17:10:12;"B";"Squat (Barbell)";1;22.5;lbs;5;;;0;"";""
 2018-10-31 17:10:12;"B";"Squat (Barbell)";2;25;lbs;5;;;0;;
 2018-10-31 17:10:12;"B";"Squat (Barbell)";3;27.5;lbs;5;;;0;;

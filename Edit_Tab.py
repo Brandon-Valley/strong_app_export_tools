@@ -15,6 +15,7 @@ class Edit_Tab(Tab.Tab):
         
         self.plot_type_____widget_setup()
         self.correct_weight_____widget_setup()
+        self.plot_workout_freq_____widget_setup()
         self.plot_btn_____widget_setup()
         
         self.grid_widgets()
@@ -51,6 +52,14 @@ class Edit_Tab(Tab.Tab):
             
             self.exercise_sel_d[exercise_name] = exercise_cbtn_sel
 
+
+
+    def plot_workout_freq_____widget_setup(self):
+        def plot_workout_freq_btn_clk():
+            print('workout freq btn test')#111111111111111111111111111111111111111111111111111111111111111111111``````````````````````````````````````
+        
+        self.plot_workout_freq_btn = Button(self.master, text = 'Plot Workout Freq.', command = plot_workout_freq_btn_clk)
+#         self.plot_workout_freq_btn.configure( state = 'disabled' ) #off by default
 
 
     def plot_btn_____widget_setup(self):
@@ -120,6 +129,10 @@ class Edit_Tab(Tab.Tab):
         row_num += 10
         
         blank_lbl_3                             .grid(column=1, row=row_num)
+        
+        row_num += 10
+        
+        self.plot_workout_freq_btn              .grid(column=1, row=row_num)
         
         row_num += 10
         
