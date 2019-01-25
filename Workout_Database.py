@@ -117,6 +117,10 @@ class Workout_Database:
         trace_name = exercise_name + ':  Total Reps' 
         key = 'total_reps'
         return self.get_trace(trace_name, key, exercise_name, hover_info)
+    
+    
+    def get_trace___workout_freq(self):
+        print('in get_trace__workout_freq() in workout database, need to write new func for this')#``````````````````````````````````````````````````
 
 
 

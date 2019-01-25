@@ -56,7 +56,8 @@ class Edit_Tab(Tab.Tab):
 
     def plot_workout_freq_____widget_setup(self):
         def plot_workout_freq_btn_clk():
-            print('workout freq btn test')#111111111111111111111111111111111111111111111111111111111111111111111``````````````````````````````````````
+#             print('workout freq btn test')#111111111111111111111111111111111111111111111111111111111111111111111``````````````````````````````````````
+            plot_data.plot_workout_freq(self.workout_database)
         
         self.plot_workout_freq_btn = Button(self.master, text = 'Plot Workout Freq.', command = plot_workout_freq_btn_clk)
 #         self.plot_workout_freq_btn.configure( state = 'disabled' ) #off by default
